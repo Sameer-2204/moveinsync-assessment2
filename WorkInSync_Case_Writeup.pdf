@@ -1,0 +1,218 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 2489 >>
+stream
+0.12 0.21 0.35 rg
+0 0 595 842 re f
+0.96 0.97 0.98 rg
+18 18 559 806 re f
+0.09 0.32 0.55 rg BT /F2 22 Tf 32 798 Td (WorkInSync seat-planning case) Tj ET
+0.35 0.35 0.35 rg BT /F1 10 Tf 32 764 Td (Executive answer | Computed model, assumptions shown) Tj ET
+0.75 0.80 0.85 RG 32 749 m 563 749 l S
+0.09 0.32 0.55 rg BT /F2 13 Tf 32 739 Td (Answer in one line) Tj ET
+0.75 0.80 0.85 RG 32 719 m 563 719 l S
+0.12 0.12 0.12 rg BT /F1 11 Tf 32 709 Td (Seat range: 1,200 to 1,575. Recommendation: about 1,400 seats \(0.7 seats per person\), managed with team) Tj ET
+0.12 0.12 0.12 rg BT /F1 11 Tf 32 692 Td (anchor days, booking soft caps, small overflow capacity, and an 8-week check-in review.) Tj ET
+0.09 0.32 0.55 rg BT /F2 13 Tf 32 671 Td (Why 1,200 is only the hard floor) Tj ET
+0.75 0.80 0.85 RG 32 651 m 563 651 l S
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 641 Td (2,000 people x 3 in-office days / 5-day working week = 1,200 average people per day. A facility,) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 628 Td (however, must cover the busiest weekday. The unknown is how attendance is distributed, not the weekly) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 615 Td (total.) Tj ET
+0.09 0.32 0.55 rg BT /F2 13 Tf 32 598 Td (Scenario sizing) Tj ET
+0.75 0.80 0.85 RG 32 578 m 563 578 l S
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 568 Td (A. Perfectly balanced    peak 1,200 | seats 1,260 | 60% / 60% / 60% / 60% / 60%) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 555 Td (  Policy-assigned days) Tj ET
+0.12 0.12 0.12 rg BT /F2 9 Tf 32 543 Td (B. Managed               peak 1,300 | seats 1,365 | 50% / 65% / 65% / 65% / 55%) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 530 Td (  MODELING ASSUMPTION: team anchors / soft cap) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 518 Td (C. Unmanaged             peak 1,500 | seats 1,575 | 45% / 70% / 75% / 70% / 40%) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 505 Td (  MODELING ASSUMPTION: free choice / Tue-Thu skew) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 493 Td (D. Worst case            peak 2,000 | seats 2,000 | 100% / 100% / 100% / 0% / 0%) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 480 Td (  All choose the same three days) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 463 Td (Scenario B and C weekday profiles are modeling assumptions. The practical minimum is 1,260-1,365) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 450 Td (seats; unmanaged behavior raises demand to 1,575; 2,000 is the no-hybrid ceiling.) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 31 Td (WorkInSync case | modeled estimate | page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 2972 >>
+stream
+0.12 0.21 0.35 rg
+0 0 595 842 re f
+0.96 0.97 0.98 rg
+18 18 559 806 re f
+0.09 0.32 0.55 rg BT /F2 18 Tf 32 798 Td (Executive reasoning and recommendation) Tj ET
+0.75 0.80 0.85 RG 32 771 m 563 771 l S
+0.09 0.32 0.55 rg BT /F2 13 Tf 32 761 Td (Policy and booking are the main levers) Tj ET
+0.75 0.80 0.85 RG 32 741 m 563 741 l S
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 731 Td (At 95% confidence \(assumption: z=1.645\), independent attendance gives about 1,236 people, only 3%) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 718 Td (above the 1,200 mean. The 1,200-1,575 range is therefore mostly correlated behavior: teams selecting) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 705 Td (the same weekdays.) Tj ET
+0.09 0.32 0.55 rg BT /F2 13 Tf 32 688 Td (Illustrative per-office sizing) Tj ET
+0.75 0.80 0.85 RG 32 668 m 563 668 l S
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 658 Td (Seats cannot be pooled across countries. With the approved illustrative 1,000 / 600 / 400 split, a 65%) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 645 Td (planning peak and 5% buffer gives:) Tj ET
+0.12 0.12 0.12 rg BT /F2 10 Tf 32 628 Td (Office 1: 1,000 people x 65% x 1.05 = 683 seats) Tj ET
+0.12 0.12 0.12 rg BT /F2 10 Tf 32 613 Td (Office 2: 600 people x 65% x 1.05 = 410 seats) Tj ET
+0.12 0.12 0.12 rg BT /F2 10 Tf 32 598 Td (Office 3: 400 people x 65% x 1.05 = 273 seats) Tj ET
+0.09 0.32 0.55 rg BT /F2 11 Tf 32 583 Td (Total: 1,366 seats) Tj ET
+0.09 0.32 0.55 rg BT /F2 13 Tf 32 566 Td (Recommendation) Tj ET
+0.75 0.80 0.85 RG 32 546 m 563 546 l S
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 536 Td (Plan about 1,400 seats: roughly a 8% buffer over the managed peak. Aim to stay near the managed) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 523 Td (pattern, use overflow for spikes, and avoid fitting out the unmanaged case before measuring actual) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 510 Td (behavior. Pilot at one office, then review peak check-ins, denials, no-shows, co-presence, and CSAT) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 497 Td (after 8 weeks.) Tj ET
+0.09 0.32 0.55 rg BT /F2 13 Tf 32 480 Td (Caveats) Tj ET
+0.75 0.80 0.85 RG 32 460 m 563 460 l S
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 450 Td (UNKNOWN: real office/country split, local working weeks and holidays, actual attendance,) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 437 Td (collaboration-space usage, lease limits, and available source systems. Desk count is not space) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 424 Td (planning; meeting and collaboration space need observed room-usage data.) Tj ET
+0.09 0.32 0.55 rg BT /F2 13 Tf 32 407 Td (What I would ask the customer) Tj ET
+0.75 0.80 0.85 RG 32 387 m 563 387 l S
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 377 Td (Real headcount per office; local working weeks and holidays; hybrid policy and enforcement; badge,) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 364 Td (booking and ticket data; collaboration needs; and lease constraints.) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 31 Td (WorkInSync case | modeled estimate | page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5303 >>
+stream
+0.12 0.21 0.35 rg
+0 0 595 842 re f
+0.96 0.97 0.98 rg
+18 18 559 806 re f
+0.09 0.32 0.55 rg BT /F2 18 Tf 32 798 Td (Facilities KPI scorecard) Tj ET
+0.65 0.30 0.05 rg BT /F2 9 Tf 32 771 Td (Targets are illustrative, to be calibrated after a 4-8 week baseline.) Tj ET
+0.75 0.80 0.85 RG 32 758 m 563 758 l S
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 748 Td (SYNTHETIC / ILLUSTRATIVE scorecard structure. Report by office and country when source data is) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 735 Td (available. Read utilization with denial rate and CSAT so a full office is not mistaken for a successful) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 722 Td (workplace.) Tj ET
+0.09 0.32 0.55 rg BT /F2 9 Tf 32 705 Td (Space efficiency | Peak-day utilization) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 692 Td (Formula: Peak occupied seats / total seats) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 680 Td (Data: Check-in or badge data + seat inventory | Weekly | Owner: Facilities) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 668 Td (Illustrative target: 80-90%) Tj ET
+0.09 0.32 0.55 rg BT /F2 9 Tf 32 654 Td (Space efficiency | Weekday utilization skew) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 641 Td (Formula: Max weekday utilization - min weekday utilization) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 629 Td (Data: Check-in or badge data | Weekly | Owner: Facilities + leadership policy) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 617 Td (Illustrative target: Narrowing over time) Tj ET
+0.09 0.32 0.55 rg BT /F2 9 Tf 32 603 Td (Space efficiency | Cost per employee-day in office) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 590 Td (Formula: Occupancy cost / employee-days present) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 578 Td (Data: Occupancy cost + presence data | Monthly | Owner: Facilities + Finance) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 566 Td (Illustrative target: Trending down) Tj ET
+0.09 0.32 0.55 rg BT /F2 9 Tf 32 552 Td (Booking quality | Seat denial rate) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 539 Td (Formula: Failed booking attempts / booking attempts) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 527 Td (Data: Booking records | Weekly | Owner: Facilities) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 515 Td (Illustrative target: <2%) Tj ET
+0.09 0.32 0.55 rg BT /F2 9 Tf 32 501 Td (Booking quality | No-show rate) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 488 Td (Formula: Booked but not checked in / booked) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 476 Td (Data: Booking + check-in records | Weekly | Owner: Facilities) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 464 Td (Illustrative target: <10-15% with auto-release) Tj ET
+0.09 0.32 0.55 rg BT /F2 9 Tf 32 450 Td (Employee experience | Workplace CSAT / eNPS) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 437 Td (Formula: Pulse-survey score) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 425 Td (Data: Survey | Monthly / quarterly | Owner: Shared with leadership) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 413 Td (Illustrative target: >=4/5) Tj ET
+0.09 0.32 0.55 rg BT /F2 9 Tf 32 399 Td (Employee experience | Team co-presence) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 386 Td (Formula: Team anchor days meeting participation threshold / anchor days) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 374 Td (Data: Check-in data + team roster | Monthly | Owner: Shared with leadership) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 362 Td (Illustrative target: Improving) Tj ET
+0.09 0.32 0.55 rg BT /F2 9 Tf 32 348 Td (Service operations | Ticket SLA adherence) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 335 Td (Formula: Tickets resolved within SLA / total tickets) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 323 Td (Data: Ticket system | Weekly | Owner: Facilities) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 311 Td (Illustrative target: >=95%) Tj ET
+0.09 0.32 0.55 rg BT /F2 9 Tf 32 297 Td (Service operations | Repeat-issue rate) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 284 Td (Formula: Repeat tickets / total tickets) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 272 Td (Data: Ticket system | Monthly | Owner: Facilities) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 260 Td (Illustrative target: Down) Tj ET
+0.09 0.32 0.55 rg BT /F2 9 Tf 32 246 Td (Safety & compliance | Critical incidents / findings) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 233 Td (Formula: Open count and days to close) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 221 Td (Data: Incident and audit records | Weekly | Owner: Facilities) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 209 Td (Illustrative target: Zero critical open) Tj ET
+0.09 0.32 0.55 rg BT /F2 9 Tf 32 195 Td (Sustainability | Energy per occupied seat-day) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 182 Td (Formula: kWh / occupied seat-days) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 170 Td (Data: Utility meters + presence data | Monthly | Owner: Facilities) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 158 Td (Illustrative target: Down vs baseline) Tj ET
+0.09 0.32 0.55 rg BT /F2 9 Tf 32 144 Td (Financial | Budget variance / rightsizing savings) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 131 Td (Formula: Actual vs plan; space cost avoided) Tj ET
+0.12 0.12 0.12 rg BT /F1 8 Tf 32 119 Td (Data: Finance + occupancy data | Monthly | Owner: Facilities + Finance) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 107 Td (Illustrative target: Within +/-5%) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 31 Td (WorkInSync case | modeled estimate | page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 2511 >>
+stream
+0.12 0.21 0.35 rg
+0 0 595 842 re f
+0.96 0.97 0.98 rg
+18 18 559 806 re f
+0.09 0.32 0.55 rg BT /F2 18 Tf 32 798 Td (KPI operating model and rollout) Tj ET
+0.75 0.80 0.85 RG 32 771 m 563 771 l S
+0.09 0.32 0.55 rg BT /F2 13 Tf 32 761 Td (How to use the scorecard) Tj ET
+0.75 0.80 0.85 RG 32 741 m 563 741 l S
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 731 Td (Leading indicators: booking attempts, denials and no-shows. Lagging indicators: CSAT, cost, energy and) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 718 Td (budget. Facilities controls service delivery and operational data quality; leadership co-owns policy) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 705 Td (choices such as mandated office days and team anchors.) Tj ET
+0.09 0.32 0.55 rg BT /F2 13 Tf 32 688 Td (Four-step rollout) Tj ET
+0.75 0.80 0.85 RG 32 668 m 563 668 l S
+0.12 0.12 0.12 rg BT /F1 10 Tf 32 658 Td (1. Collect baseline: seats, bookings, check-ins/badge swipes, tickets, utilities, surveys, and lease) Tj ET
+0.12 0.12 0.12 rg BT /F1 10 Tf 32 643 Td (constraints.) Tj ET
+0.12 0.12 0.12 rg BT /F1 10 Tf 32 624 Td (2. Pilot staggering: team anchor days and booking soft caps at one office.) Tj ET
+0.12 0.12 0.12 rg BT /F1 10 Tf 32 605 Td (3. Review after 8 weeks: check peak use, denials, no-shows, co-presence, CSAT, tickets and cost.) Tj ET
+0.12 0.12 0.12 rg BT /F1 10 Tf 32 586 Td (4. Set final targets from the baseline and rightsize gradually; publish office/country scorecards.) Tj ET
+0.09 0.32 0.55 rg BT /F2 13 Tf 32 567 Td (Model assumptions) Tj ET
+0.75 0.80 0.85 RG 32 547 m 563 547 l S
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 537 Td (Approved assumptions: 5-day working week, 5% buffer, 95% confidence / z=1.645, and illustrative office) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 524 Td (split 1,000 / 600 / 400. Scenario B and C profiles are explicit modeling assumptions. All are editable) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 511 Td (in the workbook.) Tj ET
+0.09 0.32 0.55 rg BT /F2 13 Tf 32 494 Td (Claim status) Tj ET
+0.75 0.80 0.85 RG 32 474 m 563 474 l S
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 464 Td (Given in case: 2,000 people, three offices/countries, three in-office days. Computed: all seat counts) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 451 Td (and statistical margins. Assumption: working week, buffer, split, confidence/z, B/C weekday profiles.) Tj ET
+0.12 0.12 0.12 rg BT /F1 9 Tf 32 438 Td (Needs customer input: country and source-system facts.) Tj ET
+0.35 0.35 0.35 rg BT /F1 8 Tf 32 31 Td (WorkInSync case | modeled estimate | page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000141 00000 n 
+0000000211 00000 n 
+0000000286 00000 n 
+0000002827 00000 n 
+0000002963 00000 n 
+0000005987 00000 n 
+0000006123 00000 n 
+0000011478 00000 n 
+0000011615 00000 n 
+0000014179 00000 n 
+trailer
+<< /Size 13 /Root 1 0 R >>
+startxref
+14317
+%%EOF

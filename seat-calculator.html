@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WorkInSync Seat Calculator</title>
+  <style>
+    :root { --ink:#14283d; --blue:#1669aa; --pale:#e8f3fb; --line:#d5e0ea; --green:#e7f4ea; --warn:#fff0d9; --red:#9b1c1c; }
+    * { box-sizing:border-box } body { margin:0; font:15px/1.45 Aptos,Segoe UI,Arial,sans-serif; color:var(--ink); background:#f4f7fa }
+    main { max-width:1180px; margin:auto; padding:30px 20px 48px } h1 { margin:0; font-size:30px } h2 { margin:0 0 12px; font-size:20px } h3 { margin:18px 0 8px; font-size:16px }
+    .sub { margin:5px 0 25px; color:#526272 } .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:16px } .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px; box-shadow:0 1px 2px #14283d0b }
+    .inputs { grid-column:span 5 } .answer { grid-column:span 7 } .full { grid-column:span 12 } .office { grid-column:span 6 } @media(max-width:760px){ .inputs,.answer,.office { grid-column:span 12 } }
+    label { display:block; font-size:12px; font-weight:700; margin-bottom:3px; color:#385069 } input { width:100%; border:1px solid #a9bfd1; border-radius:5px; padding:7px; font:inherit; background:var(--pale) }
+    .input-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px } .profile { display:grid; grid-template-columns:repeat(5,1fr); gap:8px } .office-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px }
+    .metric { background:var(--green); border-radius:8px; padding:13px; min-height:85px } .metric b { display:block; font-size:27px } .metric small { color:#496154 } .metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:10px } @media(max-width:500px){.metrics {grid-template-columns:1fr}}
+    table { width:100%; border-collapse:collapse; font-size:13px } th { background:var(--blue); color:white; text-align:left } th,td { padding:8px; border:1px solid var(--line) } td.num,th.num { text-align:right } .note { padding:10px; background:var(--warn); border-radius:6px; font-size:13px } .ok { background:var(--green) } .error { background:#fee2e2; color:var(--red) }
+    canvas { width:100%; height:280px; border:1px solid var(--line); border-radius:6px; background:#fff } code { background:#eef2f6; border-radius:3px; padding:2px 4px } .small { font-size:12px; color:#526272 }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Seat Planning Calculator</h1>
+  <p class="sub">Offline model for the WorkInSync case. Blue fields are editable. All outcomes are modeled estimates, not forecasts.</p>
+  <div class="grid">
+    <section class="card inputs">
+      <h2>Global inputs</h2>
+      <div class="input-grid">
+        <div><label for="days">In-office days / week</label><input id="days" type="number" min="0" step="0.1" value="3"></div>
+        <div><label for="workdays">Working days / week</label><input id="workdays" type="number" min="1" step="0.1" value="5"></div>
+        <div><label for="buffer">Planning buffer (%)</label><input id="buffer" type="number" min="0" step="0.1" value="5"></div>
+      </div>
+      <h3>Office headcounts <span class="small">(illustrative split; country is UNKNOWN)</span></h3>
+      <div class="office-grid">
+        <div><label for="office1">Office 1</label><input id="office1" type="number" min="0" step="1" value="1000"></div>
+        <div><label for="office2">Office 2</label><input id="office2" type="number" min="0" step="1" value="600"></div>
+        <div><label for="office3">Office 3</label><input id="office3" type="number" min="0" step="1" value="400"></div>
+      </div>
+      <h3>Active weekday profile <span class="small">(attendance % of each office headcount)</span></h3>
+      <div class="profile">
+        <div><label for="mon">Mon</label><input id="mon" type="number" min="0" max="100" step="1" value="50"></div>
+        <div><label for="tue">Tue</label><input id="tue" type="number" min="0" max="100" step="1" value="65"></div>
+        <div><label for="wed">Wed</label><input id="wed" type="number" min="0" max="100" step="1" value="65"></div>
+        <div><label for="thu">Thu</label><input id="thu" type="number" min="0" max="100" step="1" value="65"></div>
+        <div><label for="fri">Fri</label><input id="fri" type="number" min="0" max="100" step="1" value="55"></div>
+      </div>
+      <p id="profileStatus" class="note"></p>
+    </section>
+    <section class="card answer">
+      <h2>Active-profile result</h2>
+      <div class="metrics">
+        <div class="metric"><small>Total headcount</small><b id="totalHeadcount">2,000</b></div>
+        <div class="metric"><small>Average daily load</small><b id="averageLoad">1,200</b></div>
+        <div class="metric"><small>Seats required</small><b id="activeSeats">1,365</b></div>
+      </div>
+      <h3>Daily load</h3><canvas id="dailyChart" width="700" height="280" aria-label="Daily load chart"></canvas>
+      <p id="formula" class="small"></p>
+    </section>
+    <section class="card full">
+      <h2>Seats by office — active profile</h2>
+      <table><thead><tr><th>Office</th><th class="num">Headcount</th><th class="num">Peak profile</th><th class="num">Buffer</th><th class="num">Seats required</th></tr></thead><tbody id="officeRows"></tbody></table>
+      <p class="small">Formula: <code>MIN(headcount, CEILING(headcount × peak attendance × (1 + buffer)))</code>. Seat capacity cannot be pooled across countries.</p>
+    </section>
+    <section class="card full">
+      <h2>Comparison to case scenarios</h2>
+      <table><thead><tr><th>Scenario</th><th>Profile (Mon-Fri)</th><th class="num">Peak people</th><th class="num">Seats with buffer</th><th>Note</th></tr></thead><tbody id="scenarioRows"></tbody></table>
+      <p class="small">B and C profiles are modeling assumptions. D is the no-hybrid absolute ceiling. Each row must sum to the selected in-office days.</p>
+    </section>
+    <section class="card full">
+      <h2>How to use the result</h2>
+      <p>Do not size only to the average: the peak day governs the desk count. Use managed team anchor days and booking soft caps to keep attendance near the managed pattern; hold a small overflow option and review real check-in data after 8 weeks before rightsizing.</p>
+      <p class="note">Inputs still needed from a customer: real headcount by office, working-week and holiday rules, hybrid policy and enforcement, check-in/booking data, collaboration-space demand, and lease constraints.</p>
+    </section>
+  </div>
+</main>
+<script>
+  const scenarioProfiles = [
+    ['A. Perfectly balanced', [60,60,60,60,60], 'Policy-assigned days'],
+    ['B. Managed', [50,65,65,65,55], 'MODELING ASSUMPTION: team anchors / soft cap'],
+    ['C. Unmanaged', [45,70,75,70,40], 'MODELING ASSUMPTION: free choice / Tue-Thu skew'],
+    ['D. Worst case', [100,100,100,0,0], 'All choose the same three days']
+  ];
+  const ids = ['days','workdays','buffer','office1','office2','office3','mon','tue','wed','thu','fri'];
+  ids.forEach(id => document.getElementById(id).addEventListener('input', update));
+  const num = id => Number(document.getElementById(id).value) || 0;
+  const fmt = n => Math.round(n).toLocaleString('en-US');
+  const pct = n => `${(n * 100).toFixed(n * 100 % 1 ? 1 : 0)}%`;
+  const seats = (people, peak, buffer) => Math.min(people, Math.ceil(people * peak * (1 + buffer)));
+
+  function drawChart(loads) {
+    const canvas = document.getElementById('dailyChart'), ctx = canvas.getContext('2d');
+    const width = canvas.width, height = canvas.height, days = ['Mon','Tue','Wed','Thu','Fri'];
+    const maximum = Math.max(...loads, 1), top = 30, base = 235, chartHeight = base - top;
+    ctx.clearRect(0,0,width,height); ctx.font = '13px Segoe UI';
+    ctx.fillStyle = '#526272'; ctx.fillText('People in office', 12, 18);
+    ctx.strokeStyle = '#d5e0ea'; ctx.beginPath(); ctx.moveTo(48,base); ctx.lineTo(width-20,base); ctx.stroke();
+    loads.forEach((load,i) => { const x = 75 + i * 122, bar = Math.round(chartHeight * load / maximum); ctx.fillStyle = '#1669aa'; ctx.fillRect(x,base-bar,72,bar); ctx.fillStyle='#14283d'; ctx.fillText(fmt(load), x+15, base-bar-8); ctx.fillText(days[i], x+18, base+20); });
+  }
+
+  function update() {
+    const days = num('days'), workdays = num('workdays'), buffer = num('buffer') / 100;
+    const offices = [num('office1'),num('office2'),num('office3')], total = offices.reduce((a,b)=>a+b,0);
+    const profile = ['mon','tue','wed','thu','fri'].map(id => num(id) / 100), profileSum = profile.reduce((a,b)=>a+b,0), peak = Math.max(...profile);
+    const average = workdays ? total * days / workdays : 0, loads = profile.map(x => total * x), activeSeats = seats(total,peak,buffer);
+    document.getElementById('totalHeadcount').textContent = fmt(total); document.getElementById('averageLoad').textContent = fmt(average); document.getElementById('activeSeats').textContent = fmt(activeSeats);
+    const status = document.getElementById('profileStatus'), valid = Math.abs(profileSum - days) < 0.0001;
+    status.className = `note ${valid ? 'ok' : 'error'}`; status.textContent = valid ? `Profile valid: ${pct(profileSum)} totals ${days} in-office days.` : `Profile mismatch: ${pct(profileSum)} must total ${days} in-office days (${days * 100}%).`;
+    document.getElementById('formula').textContent = `Average = ${fmt(total)} × (${days} / ${workdays || '?'}) = ${fmt(average)}. Active seats = MIN(${fmt(total)}, CEILING(${fmt(total)} × ${pct(peak)} × (1 + ${pct(buffer)}))) = ${fmt(activeSeats)}.`;
+    document.getElementById('officeRows').innerHTML = offices.map((count,i) => `<tr><td>Office ${i+1} <span class="small">(country: UNKNOWN)</span></td><td class="num">${fmt(count)}</td><td class="num">${pct(peak)}</td><td class="num">${pct(buffer)}</td><td class="num"><b>${fmt(seats(count,peak,buffer))}</b></td></tr>`).join('') + `<tr><th>Total</th><th class="num">${fmt(total)}</th><th></th><th></th><th class="num">${fmt(offices.reduce((sum,count)=>sum+seats(count,peak,buffer),0))}</th></tr>`;
+    document.getElementById('scenarioRows').innerHTML = scenarioProfiles.map(([name, values, note]) => { const scenarioPeak = Math.max(...values) / 100, peakPeople = total * scenarioPeak, result = seats(total, scenarioPeak, buffer); return `<tr><td>${name}</td><td>${values.join(' / ')}%</td><td class="num">${fmt(peakPeople)}</td><td class="num"><b>${fmt(result)}</b></td><td>${note}</td></tr>`; }).join('');
+    drawChart(loads);
+  }
+  update();
+</script>
+</body>
+</html>
